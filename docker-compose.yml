@@ -33,14 +33,14 @@ services:
       options:
         fluentd-address: 'localhost:24224'
         tag: docker.{{.FullID}}
-  node_app:
-    build: node_app/
-    links:
-      - fluentd
-    ports:
-      - '8080:8080'
-    logging:
-      driver: 'fluentd'
-      options:
-        fluentd-address: 'localhost:24224'
-        tag: docker.{{.FullID}}
+#  node_app:
+#    build: node_app/
+#    links:
+#      - fluentd
+#    ports:
+#      - '8080:8080'
+#    logging:
+#      driver: 'fluentd'
+#      options:
+#        fluentd-address: 'localhost:24224'
+#        tag: docker.{{.FullID}}

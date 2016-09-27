@@ -8,6 +8,6 @@ RUN chmod +x /tmp/entrypoint.sh
 
 RUN mkdir -p app
 ADD app/ /app
-RUN cd /app && npm i
+#RUN cd /app && npm i
 
-CMD [ "sh", "-c", "/tmp/entrypoint.sh" ]
+#CMD [ "sh", "-c", "/tmp/entrypoint.sh" ]
