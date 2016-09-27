@@ -9,13 +9,6 @@ EFK setup with docker, docker-compose.
 
 ## Usege
 
-Using docker-machine
-
-```sh
-docker-machine create -d virtualbox dev
-eval "$(docker-machine env dev)"
-```
-
 ```sh
 docker-compose up
 ```
@@ -25,7 +18,7 @@ Use Background
 ```sh
 docker-compose up -d
 ```
-
+Check status
 ```sh
 docker-compose ps
           Name                         Command               State                Ports
@@ -40,11 +33,7 @@ dockerefk_node_app_1        sh -c /tmp/entrypoint.sh         Up      0.0.0.0:808
 ```sh
 # open kibana
 open http://localhot:5601
-
-# if use docker-machine
-open http://"$(docker-machine ip dev)":5601
 ```
-
-If you use docker-toolbox, localhost is docker-machine ip.
-
-
+to connect your nodejs app to fluentD, use localhost:24224 to direct your events.
+default configuration of fluentD forwards events labels with docker.** to elasticsearch
+See the configuration in nodejs app 
