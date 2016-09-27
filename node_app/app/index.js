@@ -12,7 +12,7 @@ var server = app.listen(port, () => {
   var logger = require('fluent-logger')
 // The 2nd argument can be omitted. Here is a default value for options.
 logger.configure('docker', {
-   host: 'fluentd',
+   host: 'fluentd', // use 'localhost' if you are not running your nodejs app in docker
    port: 24224,
    timeout: 3.0,
    reconnectInterval: 600000 // 10 minutes
