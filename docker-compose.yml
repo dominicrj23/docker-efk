@@ -25,7 +25,7 @@ services:
     build: nginx/
     links:
       - fluentd
-      - node_app
+#      - node_app
     ports:
       - '80:80'
     logging:
